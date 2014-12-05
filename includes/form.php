@@ -1,37 +1,4 @@
-<?php
-
-/*
-session_start();
-require('includes/function.php');
-
-
-if ( $user_profile = logged_gmail_user() ) {
-	echo '<pre>';print_r($user_profile);echo '<pre>';
-} 
-
-*/
-
-
-/*
-
-if ( $user_profile = logged_fb_user() ) {
-	echo '<pre>';print_r($user_profile);echo '<pre>';
-	
-	$fbid = $user_profile['id'];                 // To Get Facebook ID
-	$fbuname = $user_profile['username'];  // To Get Facebook Username
-	$fbfullname = $user_profile['name']; // To Get Facebook full name
-	$femail = $user_profile['email'];    // To Get Facebook email ID
-	
-}else {
-	echo 'No Data';	
-}
-
-
-
-*/
-require_once('config.php');
-
-?>
+<?php	require_once('config.php'); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -177,7 +144,7 @@ $(function() {
 
   <div id="msg_email"></div>
   <form action="" method="post">
-  <?php echo !empty($__CONFIG['VRE_CONTACTUS']['OFFER']['title']) ? "<strong>{$__CONFIG['VRE_CONTACTUS']['OFFER']['title']}</strong>" : '' ?>
+  <?php echo !empty($__CONFIG['VRE_CONTACTUS']['OFFER']['title']) ? "<p><strong>{$__CONFIG['VRE_CONTACTUS']['OFFER']['title']}</strong></p>" : '' ?>
   <?php echo !empty($__CONFIG['VRE_CONTACTUS']['OFFER']['description']) ? "<p>{$__CONFIG['VRE_CONTACTUS']['OFFER']['description']}</p>" : '' ?>
   	<input type="hidden" name="action" value="User" />
   	<label>Name:</label>

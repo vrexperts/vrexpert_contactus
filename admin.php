@@ -2,7 +2,6 @@
 	require_once('includes/config.php');
 	$admin_pwd = $__CONFIG['VRE_CONTACTUS']['ADMIN_PASSWORD'];
 	
-		
 	if(isset($_POST) && !empty($_POST) ) {
 	
 		if($admin_pwd !== $_POST['admin_pwd']) {
@@ -16,7 +15,14 @@
 		fclose($myfile);
 	}
 	
-	
+	if(file_exists('data.txt')) {
+		$myfile = fopen("data.txt", "r") or die("Unable to open file!");
+		$file_data = fread($myfile,filesize("data.txt"));
+		$file_data_arr = unserialize($file_data);
+		//print_r($file_data_arr);
+		extract($file_data_arr);
+		fclose($myfile);
+	}
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
