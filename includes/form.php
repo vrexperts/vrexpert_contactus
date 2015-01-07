@@ -14,7 +14,15 @@ border: 2px solid #F00 !important;
 
 <script>
 
+function preloadImage(url)
+{
+    var img = new Image();
+    img.src = url;
+}
+
 $(function() {
+	
+	/*
     var appId = '<?php echo $__CONFIG['VRE_CONTACTUS']['FB']['appId']; ?>' //'125598177640725';
     var siteRoot = '';
 
@@ -92,7 +100,9 @@ $(function() {
     }
 );
 
+*/
 
+	preloadImage('<?php echo !empty($__CONFIG['VRE_CONTACTUS']['OFFER']['image_url']) ? $__CONFIG['VRE_CONTACTUS']['OFFER']['image_url'] : '' ; ?>');
 
 
 
@@ -107,7 +117,8 @@ $(function() {
 				 $('.popup form')[0].reset();
 				 $('#msg_email').attr('class','msg_success');
 				 $('#msg_email').html("Message Sent.");
-				 window.location.href = "<?php echo !empty($__CONFIG['VRE_CONTACTUS']['EMAIL']['redirect_success']) ? $__CONFIG['VRE_CONTACTUS']['EMAIL']['redirect_success']  : "http://www.surrealmedialabs.com/thankyou-photography.php"  ; ?>";
+				 window.parent.location.href = "<?php echo !empty($__CONFIG['VRE_CONTACTUS']['EMAIL']['redirect_success']) ? $__CONFIG['VRE_CONTACTUS']['EMAIL']['redirect_success']  : "http://www.surrealmedialabs.com/thankyou-photography.php"  ; ?>";
+				 window.close();
 			 }else {
 				 $('#msg_email').attr('class','msg_error');
 				 //$('#msg_email').html("Validation errors occurred. Please confirm the fields and submit it again.");
@@ -125,7 +136,7 @@ $(function() {
 
 <body<?php echo !empty($__CONFIG['VRE_CONTACTUS']['OFFER']['image_url']) ? " style=\"background: url('{$__CONFIG['VRE_CONTACTUS']['OFFER']['image_url']}') no-repeat scroll 0 0 / 830px 400px rgba(0, 0, 0, 0); \"" : '' ; ?>>
 
-<div class="fb-like" data-href="<?php echo $__CONFIG['VRE_CONTACTUS']['SOCIAL_URL']['fb']; ?>" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+<!--<div class="fb-like" data-href="<?php echo $__CONFIG['VRE_CONTACTUS']['SOCIAL_URL']['fb']; ?>" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
 
 <a class="twitter-follow-button" href="<?php echo $__CONFIG['VRE_CONTACTUS']['SOCIAL_URL']['twitter']; ?>" data-show-count="false" data-size="small" data-width="125px" data-align="left" data-show-screen-name="true"  data-lang="en">Follow @SMLIndia</a>
   	<script type="text/javascript">
@@ -137,7 +148,7 @@ $(function() {
   			fjs.parentNode.insertBefore(js, fjs);
   			return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
 		}(document, "script", "twitter-wjs"));
-</script>
+</script>-->
 
 
 <div class="popup">
@@ -168,7 +179,7 @@ $(function() {
  </form>
 
 
- <div class="fb-login-button" data-scope="email" data-show-faces="true" data-width="1" data-max-rows="1">Get Profile</div>
+ <!--<div class="fb-login-button" data-scope="email" data-show-faces="true" data-width="1" data-max-rows="1">Get Profile</div>-->
 
 
 </div>

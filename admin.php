@@ -77,7 +77,7 @@ function myCompleteHandler(event)
 				if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
 					filename = filename.substring(1);
 				}
-				_("offer_image_url").value = "http://<?php echo $_SERVER['HTTP_HOST']; ?>/vrexpert_contactus/uploads/" + filename;
+				_("offer_image_url").value = "http://<?php echo $_SERVER['HTTP_HOST']; ?>/<?php echo basename(getcwd()); ?>/uploads/" + filename;
 			}
 		   
           }
