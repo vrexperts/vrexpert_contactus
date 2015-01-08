@@ -15,6 +15,7 @@
       $form_text_color='';
       $form_top_color='';
 	  $button_color_gradient='';
+	  $page_title='';
         
 
 	$email_to = "support@{$server_host}";
@@ -97,6 +98,11 @@
 	                                 'top_color' =>$form_top_color,
 	                                 
 									);
+$__CONFIG['VRE_CONTACTUS']['PAGE'] = array (
+									 'title'  => $page_title
+									);
+									
+									
 									
 							
 									

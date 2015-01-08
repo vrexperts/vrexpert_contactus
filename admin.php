@@ -28,7 +28,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Unique Utah Homes</title>
+<title><?php echo $__CONFIG['VRE_CONTACTUS']['PAGE']['title']; ?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="popup/js-css/contactcss.css" rel="stylesheet" type="text/css" />
 <style>
@@ -96,7 +96,7 @@ function myAbortHandler(event)
 <body>
 <div class="popup1">
 <form action="" method="post" enctype="multipart/form-data">
-  	<h1>VR Experts Contact Us (ADMIN)</h1>
+  	<h1><?php echo $__CONFIG['VRE_CONTACTUS']['PAGE']['title']; ?> ::(ADMIN)</h1>
     
     <label>Admin Password:</label>
     <input type="password" name="admin_pwd" class="txt" value="" required="required" />
@@ -214,6 +214,20 @@ function myAbortHandler(event)
         <div class="pad5"></div>
         
        
+       
+        
+    </fieldset>
+    
+    
+    <fieldset>
+    	<legend>Pages Title</legend>
+        
+        <label>Page Title</label>
+        <input type="test" name="page_title" class="txt" value="<?php echo $page_title; ?>" required="required" />
+        <div class="pad5"></div>
+        
+        
+      
        
         
     </fieldset>
