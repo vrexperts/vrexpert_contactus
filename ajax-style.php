@@ -16,6 +16,7 @@ overflow: hidden;
 font-family:Arial, Helvetica, sans-serif;
 font-size:18px;
 text-align:center;
+position:fixed;
 
 border-radius:0px 7px 7px 0px;
 -moz-border-radius:0px 7px 7px 0px;
