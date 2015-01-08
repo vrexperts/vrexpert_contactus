@@ -131,10 +131,21 @@ $(function() {
 
 </script>
 
+<style>
+body {
+background: <?php echo $__CONFIG['VRE_CONTACTUS']['FORM']['color']; ?> !important;
+}
+
+label {
+color:<?php echo $__CONFIG['VRE_CONTACTUS']['FORM']['text']; ?> !important;
+</style>
+
 </head>
 
 
 <body<?php echo !empty($__CONFIG['VRE_CONTACTUS']['OFFER']['image_url']) ? " style=\"background: url('{$__CONFIG['VRE_CONTACTUS']['OFFER']['image_url']}') no-repeat scroll 0 0 / 830px 400px rgba(0, 0, 0, 0); \"" : '' ; ?>>
+
+
 
 <!--<div class="fb-like" data-href="<?php echo $__CONFIG['VRE_CONTACTUS']['SOCIAL_URL']['fb']; ?>" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
 

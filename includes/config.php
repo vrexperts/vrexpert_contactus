@@ -4,7 +4,18 @@
 
 	$server_host = str_replace('www.','',$_SERVER['HTTP_HOST']);	
 
-	$offer_image_url = ''; $offer_title=''; $offer_description='';
+	$offer_image_url = ''; $offer_title=''; $offer_description='';$button_color='';
+	
+	$button_text='';
+	$button_text_color='';
+	$button_width='';
+	$button_height='';
+	
+	 $form_color='';
+      $form_text_color='';
+      $form_top_color='';
+	  $button_color_gradient='';
+        
 
 	$email_to = "support@{$server_host}";
 	$email_from = "admin@{$server_host}";
@@ -18,6 +29,14 @@
 	if(file_exists('../data.txt')) {
 		$myfile = fopen("../data.txt", "r") or die("Unable to open file!");
 		$file_data = fread($myfile,filesize("../data.txt"));
+		$file_data_arr = unserialize($file_data);
+		extract($file_data_arr);
+		fclose($myfile);
+	}
+	
+	if(file_exists('data.txt')) {
+		$myfile = fopen("data.txt", "r") or die("Unable to open file!");
+		$file_data = fread($myfile,filesize("data.txt"));
 		$file_data_arr = unserialize($file_data);
 		extract($file_data_arr);
 		fclose($myfile);
@@ -61,4 +80,23 @@
 									
 									);
 									
+	$__CONFIG['VRE_CONTACTUS']['BUTTON'] = array (
+									 'color'  => $button_color,
+									 'color_gradient'  =>$button_color_gradient,
+									 'text'  =>$button_text,
+	                                 'text_color' =>$button_text_color,
+	                                 'width'=>$button_width,
+	                                 'height'=> $button_height
+									);
+									
+									
+									
+	$__CONFIG['VRE_CONTACTUS']['FORM'] = array (
+									 'color'  => $form_color,
+									 'text'  =>$form_text_color,
+	                                 'top_color' =>$form_top_color,
+	                                 
+									);
+									
+							
 									

@@ -160,6 +160,68 @@ function myAbortHandler(event)
         
     </fieldset>
     
+     <fieldset>
+    	<legend>Button Setting</legend>
+        
+        <label>Bg Color</label>
+        <input type="color" name="button_color" class="txt" value="<?php echo $button_color; ?>" required="required" />
+        <div class="pad5"></div>
+        
+         <label>Bg Color(Gradient)</label>
+        <input type="color" name="button_color_gradient" class="txt" value="<?php echo $button_color_gradient; ?>" required="required" />
+        <div class="pad5"></div>
+        
+        
+        <label>Text</label>
+        <input type="text" name="button_text" class="txt" value="<?php echo $button_text; ?>" required="required" />
+        <div class="pad5"></div>
+        
+        <label>Text Color</label>
+        <input type="color" name="button_text_color" class="txt" value="<?php echo $button_text_color; ?>" required="required" />
+        <div class="pad5"></div>
+        
+        <label>Width</label>
+        <input type="text" name="button_width" class="txt" value="<?php echo $button_width; ?>" required="required" />
+        <div class="pad5"></div>
+        
+        <label>Height</label>
+        <input type="text" name="button_height" class="txt" value="<?php echo $button_height; ?>" required="required" />
+        <div class="pad5"></div>
+        
+      
+        
+        
+    </fieldset>
+    
+    
+    
+    
+    <fieldset>
+    	<legend>Form Setting</legend>
+        
+        <label>BG Color</label>
+        <input type="color" name="form_color" class="txt" value="<?php echo $form_color; ?>" required="required" />
+        <div class="pad5"></div>
+        
+        
+        
+        <label>Text Color</label>
+        <input type="color" name="form_text_color" class="txt" value="<?php echo $form_text_color; ?>" required="required" />
+        <div class="pad5"></div>
+        
+        <label>Top Bg Color</label>
+        <input type="color" name="form_top_color" class="txt" value="<?php echo $form_top_color; ?>" required="required" />
+        <div class="pad5"></div>
+        
+       
+       
+        
+    </fieldset>
+    
+    
+    
+    
+    
 
   	<label>&nbsp;</label>
     <input type="submit" class="submit" value="Submit"/>
